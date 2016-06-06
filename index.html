@@ -2,29 +2,52 @@
 <html ng-app="crudApp">
 
 <head>
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <title>Angular CRUD APP</title>
-    
-    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css"/>
-    
+
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
 </head>
 
 <body>
-    
     <!-- NAVBAR -->
-    
-    
-    
-    <ng-view></ng-view>
-    
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">CrudApp</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="#/employees">Employees</a></li>
+                <li><a href="#/departments">Departments</a></li>
+                <li><a href="#/projects">Projects</a></li>
+                <li><a href="#/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class=container id="mainContainer">
+        <ng-view></ng-view>
+    </div>
+
+
     <script type="text/javascript" src="assets/libs/jquery/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
-    <script type="text/javascript" src="assets/libs/angular/angular-route.min.js"></script>    
-    <script type="text/javascript" src="app/app.module.js"></script>    
-    <script type="text/javascript" src="app/components/home/homeController.js"></script>    
-    
+    <script type="text/javascript" src="assets/libs/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular/angular-mocks.js"></script>
+    <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/components/home/homeController.js"></script>
+    <script type="text/javascript" src="app/components/home/homeService.js"></script>
+    <script type="text/javascript" src="app/components/employee/employeeController.js"></script>
+    <script type="text/javascript" src="app/components/employee/employeeService.js"></script>
+    <script type="text/javascript" src="app/components/department/departmentController.js"></script>
+    <script type="text/javascript" src="app/components/project/projectController.js"></script>
+    <script type="text/javascript" src="app/components/contact/contactController.js"></script>
+    <script type="text/javascript" src="app/common/json/jsonService.js"></script>
+    <script type="text/javascript" src="app/mock/mockBackend.js"></script>
 </body>
-    
+
 </html>
