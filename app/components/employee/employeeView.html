@@ -1,0 +1,6 @@
+<div class="container" id="employeesContainer" ng-controller="EmployeeController">
+    <h2> Employees </h2>
+    <br/>
+    <h3 ng-repeat="emp in employees">{{emp.name}}</h3>
+    <button ng-click="getEmployees()">My button</button>
+</div>
