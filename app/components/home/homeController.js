@@ -19,6 +19,4 @@ angular.module('crudApp')
 
     };
 
-    $scope.getEmployees();
-
     }]);

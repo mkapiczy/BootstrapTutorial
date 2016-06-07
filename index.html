@@ -12,24 +12,76 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">CrudApp</a>
+    <div class="container-fluid" id="main">
+
+        <!-- NAVBAR -->
+        <nav class="navbar-default navbar-fixed-top" role="navigation" id="navigationBar">
+            <div class="container">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationMenu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Euro2016 Logo" id="menuLogo"></a>
+                
+                <div class="navbar-collapse collapse navbar-responsive-collapse" id="navigationMenu">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{ active: isActive('/employees')}"><a href="#/employees">Employees</a></li>
+                        <li ng-class="{ active: isActive('/departments')}"><a href="#/departments">Departments</a></li>
+                        <li class="dropdown" ng-class="{ active: isActive('/projects')}">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#/projects">Projects<strong class="caret"></strong></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Dwvelopment</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li class="divider"></li>
+                                <li>More items</li>
+                                <li><a href="#">Additional item 1</a></li>
+                                <li><a href="#">Additional item 2</a></li>
+                            </ul>
+                        </li>
+                        <li ng-class="{ active: isActive('/contact')}"><a href="#/contact">Contact</a></li>
+                    </ul>
+                    <form class="navbar-form pull-left">
+                        <input type="text" class="form-control" placeholder="Search this site..." id="searchInput" />
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account<stong class="caret"/></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-wrench" /> Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-refresh" /> Update profile</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-briefcase" /> Payments</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-off" /> Sign Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end nav collapse-->
             </div>
+        </nav>
 
-            <ul class="nav navbar-nav">
-                <li><a href="#/employees">Employees</a></li>
-                <li><a href="#/departments">Departments</a></li>
-                <li><a href="#/projects">Projects</a></li>
-                <li><a href="#/contact">Contact</a></li>
-            </ul>
+        <!-- Main content -->
+        <div class="container-fluid" id="mainContentContainer">
+            <ng-view></ng-view>
         </div>
-    </nav>
-
-    <div class=container id="mainContainer">
-        <ng-view></ng-view>
     </div>
 
 
@@ -39,6 +91,7 @@
     <script type="text/javascript" src="assets/libs/angular/angular-route.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular/angular-mocks.js"></script>
     <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/components/navigation/navigationController.js"></script>
     <script type="text/javascript" src="app/components/home/homeController.js"></script>
     <script type="text/javascript" src="app/components/home/homeService.js"></script>
     <script type="text/javascript" src="app/components/employee/employeeController.js"></script>

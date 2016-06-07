@@ -1,5 +1,41 @@
-<div class="container" ng-controller="HomeController">
-    <h2> Home </h2>
-    <br/>
-   <h3>Firma CrudApp bla bla bla;. Lorem ipsum...</h3>
+<div class="container" ng-controller="HomeController" id="homeContainer">
+    <div class="carousel slide" id="myCarousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+            <li data-slide-to="1" data-target="#myCarousel"></li>
+            <li data-slide-to="2" data-target="#myCarousel"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active" id="slide1">
+                <div class="carousel-caption">
+                    <h4>Bootstrap 3</h4>
+                    <p>Learn how to built your first responsive website</p>
+                </div>
+                <!-- end carousel-caption -->
+            </div>
+            <!-- end item -->
+            <div class="item" id="slide2">
+                <div class="carousel-caption">
+                    <h4>Learn to code website in 4 hours</h4>
+                    <p>Item number 2</p>
+                </div>
+            </div>
+            <!-- end carousel-caption -->
+            <div class="item" id="slide3">
+                <div class="carousel-caption">
+                    <h4>Slide 3</h4>
+                    <p>Slide number 3 is ready!</p>
+                </div>
+                <!-- end carousel-caption -->
+            </div>
+            <!-- end item -->
+        </div>
+        <!-- carousel-inner -->
+
+        <!-- Controls -->
+        <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+        <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+    </div>
 </div>
